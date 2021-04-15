@@ -1,50 +1,39 @@
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Italic.ttf') format('truetype');
-    font-style: italic;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Bold.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-}
-
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-BoldItalic.ttf') format('truetype');
-    font-style: italic;
-    font-weight: 700;
-    text-rendering: optimizeLegibility;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --global-font-size: 16px;
-    --global-font-color: #444;
+    --global-font-color: #fff;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --font-stack: Bitter, sans-serif;
+    --font-head: Work Sans, sans-serif;
     --global-line-height: 1.6em;
     --page-width: 70em;
     --display-h1-decoration: 1;
-    --code-bg-color: #fff;
+    --code-bg-color: var(--base02);
+    --font-color: var(--base05);
+    --secondary-color: var(--base05);
+    --base00: #2d2d2d;
+    --base01: #393939;
+    --base02: #515151;
+    --base03: #747369;
+    --base04: #a09f93;
+    --base05: #d3d0c8;
+    --base06: #e8e6df;
+    --base07: #f2f0ec;
+    --base08: #f2777a;
+    --base09: #f99157;
+    --base0a: #ffcc66;
+    --base0b: #99cc99;
+    --base0c: #66cccc;
+    --base0d: #6699cc;
+    --base0e: #cc99cc;
+    --base0f: #d27b53;
 }
 
 @media only screen and (max-width: 850px) {
     :root {
         --global-font-size: 14px;
-        --global-font-color: #444;
         --global-line-height: 1.6em;
         --page-width: 70em;
     }
@@ -58,7 +47,7 @@
 }
 
 .box-masonry .box-masonry-image {
-    background: #fff;
+    background: var(--base00);
 }
 
 .box-masonry,
@@ -73,7 +62,8 @@
 body {
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
-    background-color: #fff;
+    background-color: var(--base00);
+    color: var(--base07);
     margin-bottom: 75px;
 }
 
@@ -89,7 +79,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: var(--font-stack);
+    font-family: var(--font-head) !important;
+    color: var(--base0a) !important;
     clear: both;
 }
 
@@ -122,7 +113,7 @@ h1 {
 
 p.social a {
     margin: 0 0 10px 0;
-    color: #fff;
+    color: var(--base00);
     display: inline-block;
     width: 30px;
     height: 30px;
